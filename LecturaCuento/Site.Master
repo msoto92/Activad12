@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Actividad12.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Lectura para niños</title>
+        
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="Content/bootstrap.min.css" >
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+              
+
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-fixed-top navbar-light" style="background-color: #e3f2fd;">
+            <div class="container">
+                <div class="navbar-header " >
+                    <a class="navbar-brand" runat="server" href="~/Pages/Default.aspx">Mis Cuentos</a>
+                </div>                
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer style="text-align:center">
+                <p>&copy; <%: DateTime.Now.Year %> - Lectura para niños</p>
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
